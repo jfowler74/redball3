@@ -1,0 +1,34 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<style type="text/css">
+#redball{
+
+	position: absolute;
+}
+
+
+</style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+	
+$("#redball").fadeOut();
+$("#redball").fadeIn();
+$( "#redball" ).animate({ "left": "+=50px" }, "slow" );
+$( "#redball" ).animate({ "left": "-=50px" }, "slow" );
+
+});
+</script>
+</head>
+<body>
+<img id="redball" src="redball.jpg"/>
+<script>
+$( "img" ).click(function() {
+  $( "img" ).fadeOut( "slow" );
+});
+</script>
+</body>
+</html>
