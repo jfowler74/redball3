@@ -1,0 +1,89 @@
+<Doctype html>
+<html>
+<head>
+<title>Vanishing Act</title>
+<script src="http://code.jqery.com/-1.11.0.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.14.js"></script>
+<script type="text/javascript">
+function leavePage(){
+	var r = confirm("are you sure you want to logout");
+	if (r==true) {
+	window.location="login.html";
+	}
+	else {
+	return false;
+	}
+}
+
+</script>
+<style type="text/css">
+#it {
+	width:520px;
+	height: 220px;
+	margin:0px;
+	padding:0px;
+	border:solid;
+}
+#ic {
+	width: 520px;
+	height:30px;
+}
+#button {
+	width:120px;
+	height: 25px;
+	background:yellow;
+	position: relative;
+	left:200px;
+}
+#dd {
+	position: relative;
+	left: 180px;
+}
+#move {
+	width:120px;
+	height:120px;
+	
+}
+
+<script>
+</style>
+<input type="button" value="Refresh Page" onClick="window.location.reload()"</button>
+<button onclick="leavePage()">logout</button>
+<button>map</button>
+
+</head>
+<body bgcolor="#c7c7c7">
+
+
+<div align="center">
+<img id="ttxlogo" src="LOGO.png" alt="ttxlogo" width="600" height="200" align="center">
+
+<form>
+<input type="text" name="insert car" value="Enter car below" id="ic"><br>
+<input type="text" name="insert car" value="HAX12/26, HAZ 14/25,MUX 67/33, HAX 15/52" id="it"><br>
+</form>
+<div id="button">CHOOSETRACK</div>
+
+
+<div align="center" id="dd"><select>
+	<option value="j3">J3</option>
+	<option value="j4">J4</option>
+	<option value="j5">J5</option>
+	<option value="j6">J6</option>
+	<option value="j7">J7</option>
+	<option value="j8">J8</option>
+	<option value="j9">J9</option>
+	<option value="j10">J10</option>
+	<option value="j11">J11</option>
+	<option value="j12">J12</option>
+</select></div>
+<div ID="move"><button>MOVE</button></div></div></div>
+<p id="go"></p>
+
+<script>
+	$("#move").click(function() {
+
+	}
+}
+</body>
+</html>

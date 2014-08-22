@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script>
+//declare global variables
+var hello;
+hello = new mygame;
+
+ 
+function mygame(){
+  this.sayhello = function (){
+    console.log ('hello world');
+  };
+  this.addball = function (){ 
+    var ricky = new ball();
+    var fromServer = '{"cssid":"ricky","imgsrc":"http://ronewiznation.files.wordpress.com/2014/04/wizkhalifa.png"}';
+    jQuery.extend(ricky, JSON.parse(fromServer));
+    ricky.debug();
+    ricky.show();
+    var mmg = new ball();
+    var fromServer = '{"cssid":"mmg","imgsrc":"http://o.scdn.co/300/2af6953877fea59987b481c3309b33e7f499ebc7"}';
+    jQuery.extend(mmg, JSON.parse(fromServer));
+    mmg.debug();
+    mmg.show();  
+  };  
+}
+function ball(){
+  var cssid;
+  var imgsrc;
+  this.debug = function (){
+     console.log ('my id is: ' + this.cssid);
+     console.log ('my image source is: ' + this.imgsrc);
+  };
+  this.show = function () {
+    var game = $("#game");
+    game.append("<img id='"+this.cssid+"' src='"+this.imgsrc+"'/>");
+    this.element = $("#" + this.cssid);
+  };
+}
+</script>
+</head>
+<body>
+<button onclick="hello.sayhello();">hol up</button> <button onclick="hello.addball();">we dem boyz </button>
+<div id="game"></div>
+</body>
+</html>
